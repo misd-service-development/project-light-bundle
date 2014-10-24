@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB" class="no-js">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" href="{{ asset('bundles/projectlight/favicon.ico') }}"/>
+    <link rel="apple-touch-icon" href="{{ asset('bundles/projectlight/apple-touch-icon.png') }}"/>
+
+    <link rel="stylesheet" href="{{ asset('bundles/projectlight/stylesheets/full-stylesheet.css') }}">
+
+    {% block stylesheets %}{% endblock %}
+
+    <script type="text/javascript" src="//use.typekit.com/hyb5bko.js"></script>
+    <script type="text/javascript">
+        try {
+            Typekit.load();
+        } catch (e) {
+        }
+    </script>
+    <script type="text/javascript">  document.documentElement.className += " js";</script>
+
+</head>
+
+<body class="{% block theme %}campl-theme-1{% endblock %}">
+
+<!--[if lt IE 7]>
+<div class="lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<div class="lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<div class="lt-ie9">
+<![endif]-->
+
+<a href="#primary-nav" class="campl-skipTo">skip to primary navigation</a>
+<a href="#content" class="campl-skipTo">skip to content</a>
+
+{% include 'ProjectLightBundle::globalHeader.html.twig' %}
+
+{% block content %}{% endblock %}
+
+{% block partnerships %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% include 'ProjectLightBundle::globalFooter.html.twig' %}
+
+<!--[if lte IE 8]>
+</div>
+<![endif]-->
+
+<script src="{{ asset('bundles/projectlight/javascripts/libs/ios-orientationchange-fix.js') }}"></script>
+<script src="{{ asset('bundles/projectlight/javascripts/libs/jquery-min.js') }}"></script>
+<script src="{{ asset('bundles/projectlight/javascripts/libs/modernizr.js') }}"></script>
+<script src="{{ asset('bundles/projectlight/javascripts/libs/responsive-tooltip.js') }}"></script>
+<script src="{{ asset('bundles/projectlight/javascripts/custom.js') }}"></script>
+
+{% block javascripts %}{% endblock %}
+
+</body>
+
+</html>

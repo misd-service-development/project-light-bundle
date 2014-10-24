@@ -1,0 +1,24 @@
+{% set test = level|default('information') %}
+
+{% if test == 'success' %}
+    {% set level = 'success' %}
+    {% set name = 'Success' %}
+{% elseif test == 'warning' %}
+    {% set level = 'warning' %}
+    {% set name = 'Warning' %}
+{% elseif test == 'alert' %}
+    {% set level = 'alert' %}
+    {% set name = 'Alert' %}
+{% else %}
+    {% set level = 'information' %}
+    {% set name = 'Information' %}
+{% endif %}
+
+<div class="campl-notifications-panel campl-{{ level }}-panel campl-notifications-container clearfix">
+    <div class="campl-column4">
+        <p class="campl-notifications-icon campl-{{ level }}-icon">{{ name }}:</p>
+    </div>
+    <div class="campl-column8">
+        {{ text|raw }}
+    </div>
+</div>

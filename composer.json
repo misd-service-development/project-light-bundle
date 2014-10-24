@@ -1,0 +1,34 @@
+{
+    "name": "misd/project-light-bundle",
+    "type": "symfony-bundle",
+    "description": "Adds the University of Cambridge's house style to your Symfony2 application.",
+    "homepage": "https://github.com/misd-service-development/theme-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chris Wilkinson",
+            "email": "chris.wilkinson@admin.cam.ac.uk"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/misd-service-development/theme-bundle/issues"
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/framework-bundle": "~2.2"
+    },
+    "require-dev": {
+        "knplabs/knp-menu-bundle": "~2.0",
+        "symfony/form": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Misd\\ProjectLightBundle\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
