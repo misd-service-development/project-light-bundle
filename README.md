@@ -147,3 +147,8 @@ KnpMenu render
 --------------
 
 The bundle comes with a custom menu renderer which replaces the default. If you want to use your own renderer, you can configure the KnpMenuBundle as normal.
+
+Pagerfanta view
+---------------
+
+The bundle comes with a custom view which replaces the default. If you want to use your own view, you can configure the WhiteOctoberPagerfantaBundle as normal.

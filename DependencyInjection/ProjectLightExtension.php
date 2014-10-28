@@ -22,6 +22,10 @@ final class ProjectLightExtension extends Extension implements PrependExtension
         if (isset($bundles['KnpMenuBundle'])) {
             $loader->load('knp_menu.xml');
         }
+
+        if (isset($bundles['WhiteOctoberPagerfantaBundle'])) {
+            $loader->load('pagerfanta.xml');
+        }
     }
 
     public function prepend(ContainerBuilder $container)
@@ -32,6 +36,13 @@ final class ProjectLightExtension extends Extension implements PrependExtension
             $container->prependExtensionConfig(
               'knp_menu',
               array('default_renderer' => 'project_light')
+            );
+        }
+
+        if (isset($bundles['WhiteOctoberPagerfantaBundle'])) {
+            $container->prependExtensionConfig(
+              'white_october_pagerfanta',
+              array('default_view' => 'project_light')
             );
         }
     }
