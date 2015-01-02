@@ -2,7 +2,7 @@
     "name": "misd/project-light-bundle",
     "type": "symfony-bundle",
     "description": "Adds the University of Cambridge's house style to your Symfony2 application.",
-    "homepage": "https://github.com/misd-service-development/theme-bundle",
+    "homepage": "https://github.com/misd-service-development/project-light-bundle",
     "license": "MIT",
     "authors": [
         {
@@ -11,7 +11,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/misd-service-development/theme-bundle/issues"
+        "issues": "https://github.com/misd-service-development/project-light-bundle/issues"
     },
     "require": {
         "php": ">=5.3.3",
